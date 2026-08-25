@@ -1,0 +1,7 @@
+AgriWatch - Piano didattico
+
+Il progetto e' organizzato con React Router, layout separati per Home e area applicativa, componenti riutilizzabili e mock data esterni alla UI.
+La Home presenta il prodotto e la stessa mappa della Dashboard tramite FieldMap.
+La Dashboard concentra KPI, vegetazione, mappa, legenda, grafici, statistiche e meteo.
+Le pagine Meteo, Monitoraggio, Vegetazione e Rischio ampliano i contenuti con dati locali e componenti condivisi.
+Il passaggio futuro a un backend sara' semplice perche' i dati sono gia' isolati in src/data.

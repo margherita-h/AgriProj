@@ -1,0 +1,51 @@
+AgriWatch - Development Plan / Implementation Report
+
+1. Architettura generale
+App
+ ├── Router
+ ├── Public Layout
+ │     └── Home
+ └── App Layout
+       ├── Sidebar
+       ├── TopBar
+       └── Pages
+
+2. Home
+La Home e' separata dalla Dashboard per distinguere la parte pubblica introduttiva dall'area operativa.
+Contiene header pubblico, hero, mappa condivisa, cards funzionali, sezione come funziona, CTA finale e modali mock di accesso/registrazione.
+Il modal non salva dati e serve solo come simulazione.
+La mappa usa FieldMap con variant="home" e gli stessi mock data della Dashboard.
+
+3. Dashboard
+La Dashboard usa AppLayout, KPI, pannello vegetazione, FieldMap, legenda NDVI, grafico NDVI, statistiche e widget meteo.
+Il layout e' costruito per richiamare la schermata di riferimento mantenendo una gerarchia chiara e responsive.
+
+4. Meteo
+La pagina Meteo espande il widget della Dashboard con card riepilogative, grafici temperatura e precipitazioni e previsioni mock.
+
+5. Monitoraggio
+La pagina mostra una tabella dei campi con filtri per stato e ricerca per nome campo.
+Le righe sono filtrate lato client tramite mock data.
+
+6. Vegetazione
+La pagina include NDVI, NDMI, storico, grafici e timeline delle analisi.
+
+7. Rischio
+La pagina mostra rischio siccita, vegetazione, meteo e rischio complessivo con riepilogo, grafico e campi critici.
+
+8. Componenti condivisi
+Componente | Utilizzato da | Funzione
+Sidebar | tutte le pagine applicative | navigazione
+TopBar | tutte le pagine applicative | barra superiore
+FieldMap | Home, Dashboard | mappa campi
+NdviChart | Dashboard, Vegetation | grafico NDVI
+WeatherCard | Dashboard, Meteo | informazioni meteo
+StatCard | Dashboard, Risk | KPI
+Modal | Home | registrazione mock
+
+9. Flusso dei dati
+Mock Data -> Componenti React -> Pagine -> UI
+In futuro il flusso diventera' API Express -> Axios -> React -> Componenti, senza riscrivere la struttura delle pagine.
+
+10. Build
+La build va verificata con npm run build dopo l'installazione delle dipendenze.
