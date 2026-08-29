@@ -18,7 +18,13 @@ export default function Sidebar() {
     <>
       <aside className={`sidebar ${sidebarCollapsed ? 'sidebar--collapsed' : ''} ${sidebarOpen ? 'sidebar--open' : ''}`}>
         <div className="sidebar__brand">
-          <button className="icon-button sidebar__collapse" type="button" aria-label="Comprimi navigazione" onClick={toggleSidebarCollapsed}>
+          <button
+            className="icon-button sidebar__collapse"
+            type="button"
+            aria-label={sidebarCollapsed ? 'Espandi navigazione' : 'Comprimi navigazione'}
+            aria-expanded={!sidebarCollapsed}
+            onClick={toggleSidebarCollapsed}
+          >
             <Menu size={18} />
           </button>
           <div>

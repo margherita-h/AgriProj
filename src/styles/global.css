@@ -204,7 +204,7 @@ img {
 
 .hero__eyebrow,
 .section-kicker {
-  margin: 0;
+  margin: 0.5rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -221,6 +221,10 @@ img {
 .sidebar__tag,
 .public-footer {
   color: var(--text-secondary);
+}
+
+.card > p{
+  margin: 0.5rem;
 }
 
 .hero__actions {
@@ -294,6 +298,10 @@ img {
   min-height: 100vh;
 }
 
+.app-shell--collapsed {
+  grid-template-columns: 88px minmax(0, 1fr);
+}
+
 .sidebar {
   position: sticky;
   top: 0;
@@ -317,6 +325,17 @@ img {
 }
 
 .sidebar__collapse { margin-top: 0.15rem; }
+
+.app-shell--collapsed .sidebar__brand {
+  justify-content: center;
+}
+
+.app-shell--collapsed .sidebar__tag,
+.app-shell--collapsed .sidebar__link span,
+.app-shell--collapsed .sidebar__footer,
+.app-shell--collapsed .sidebar__name {
+  display: none;
+}
 
 .sidebar__nav {
   display: grid;
@@ -356,6 +375,10 @@ img {
   padding: 1rem 1.25rem;
   margin: 1rem 1rem 0;
   border-radius: 24px;
+}
+
+.topbar__menu {
+  display: none;
 }
 
 .topbar__search {
@@ -399,7 +422,7 @@ img {
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .stat-grid {
@@ -572,7 +595,7 @@ img {
 .step-card h3,
 .modal__header h2,
 .field-map__footer h3 {
-  margin: 0;
+  margin: 0.5rem;
 }
 
 .table-wrap {
