@@ -362,6 +362,7 @@ img {
   margin-top: 1rem;
   font-size: 0.76rem;
   color: var(--text-secondary);
+  display: none;
 }
 
 .app-shell__content {
