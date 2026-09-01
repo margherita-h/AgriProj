@@ -15,9 +15,9 @@ export default function NdviChart({ data, dataKey = 'value', labelKey = 'month',
               <stop offset="95%" stopColor="#22c55e" stopOpacity={0.05} />
             </linearGradient>
           </defs>
-          <CartesianGrid stroke="rgba(255,255,255,0.06)" strokeDasharray="4 4" />
-          <XAxis dataKey={labelKey} tick={{ fill: 'rgba(226,232,240,0.7)', fontSize: 12 }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: 'rgba(226,232,240,0.7)', fontSize: 12 }} axisLine={false} tickLine={false} domain={[0, 1]} />
+          <CartesianGrid stroke="var(--chart-grid)" strokeDasharray="4 4" />
+          <XAxis dataKey={labelKey} tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} axisLine={false} tickLine={false} />
+          <YAxis tick={{ fill: 'var(--text-secondary)', fontSize: 12 }} axisLine={false} tickLine={false} domain={[0, 1]} />
           <Tooltip contentStyle={{ background: 'var(--bg-panel)', border: '1px solid var(--border-color)', color: 'var(--text-primary)' }} />
           <Area type="monotone" dataKey={dataKey} stroke="#22c55e" strokeWidth={2} fill="url(#ndvi-gradient)" />
         </AreaChart>

@@ -12,6 +12,7 @@
   --warning: #facc15;
   --danger: #f97316;
   --critical: #ef4444;
+  --chart-grid: rgba(255, 255, 255, 0.1);
   --shadow: 0 24px 60px rgba(1, 6, 20, 0.45);
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -27,6 +28,7 @@
   --text-primary: #0d1726;
   --text-secondary: #52657b;
   --border-color: rgba(15, 23, 42, 0.12);
+  --chart-grid: rgba(15, 23, 42, 0.12);
   --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
 }
 
@@ -152,6 +154,10 @@ img {
 .step-card,
 .weather-card {
   border-radius: var(--radius-lg);
+}
+
+.recharts-legend-item-text {
+  color: var(--text-secondary) !important;
 }
 
 .public-page {
