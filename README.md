@@ -18,15 +18,18 @@ AgriWatch offre una panoramica operativa dei terreni agricoli e aiuta a individu
 
 I dati utilizzati dall'applicazione sono locali e simulati, organizzati nella cartella `src/data/`.
 
-## Avvio
+## Installazione e avvio
+
+Installa le dipendenze con pnpm:
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-## Build
+## Build e anteprima
 
 ```bash
-npm run build
+pnpm build
+pnpm preview
 ```
